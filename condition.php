@@ -40,6 +40,22 @@
             echo "<p>អថេរ x មានតម្លៃតិចជាង 5</p>";
             echo "<p>អថេរ x មានតម្លៃ $x</p>";
         }    
+
+        $a= 10; // global scope
+        $b= 20; // global scope
+        if ($a < 10) $b = "Hello"; // single line if statement
+        if ($a < 10) { $b = "Hello"; } // multi line if statement
+        if ($a < 10) { $b = "Hello"; } else { $b = "Goodbye"; } // multi line if else statement
+    ?>
+
+    <h1>Ternary Operator</h1>
+    <?php
+    $a = 19;
+
+    $b = $a < 10 ? "Hello" : "Good Bye";
+    
+    echo $b; // Output: Hello
+    echo "<p>អថេរ a មានតម្លៃ $a</p>";    
     ?>
 </body>
 </html>
