@@ -1,4 +1,4 @@
-# មេរៀនទី ១: Introduction to Web Development & PHP Basics (3 hours)
+# មេរៀនទី ១: Introduction to Web Development & PHP Basics
 
 ## គោលបំណងមេរៀន
 - យល់ដឹងពីមូលដ្ឋានគ្រឹះនៃការអភិវឌ្ឍគេហទំព័រ និងតួនាទីរបស់ PHP
