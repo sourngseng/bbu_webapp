@@ -28,6 +28,8 @@
             "city" => "Siem Reap"
         ]
     ];
+
+    $name=NULL;
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +60,7 @@
     <p>Name: <span><?php echo $people[1]["name"]; ?></span></p>
     <p>Age: <span><?php echo $people[1]["age"]; ?></span></p>
     <p>City: <span><?php echo $people[1]["city"]; ?></span></p>
-    
+
     <h1>Result Multidimensional Array Loop</h1>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
