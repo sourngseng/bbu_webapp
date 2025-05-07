@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Sourng Kanika",
+        "age": 21,
+        "scores": [
+            56,
+            98,
+            78,
+            75
+        ],
+        "average_score": 76.75,
+        "grade": "C",
+        "id": "681ab6b26def2"
+    },
+    {
+        "name": "SENG Sourng",
+        "age": 24,
+        "scores": [
+            58,
+            78,
+            99,
+            88
+        ],
+        "average_score": 80.75,
+        "grade": "B",
+        "id": "681ab738a2287"
+    },
+    {
+        "name": "Thida",
+        "age": 23,
+        "scores": [
+            54,
+            32,
+            66,
+            45
+        ],
+        "average_score": 49.25,
+        "grade": "F",
+        "id": "681ab75963af1"
+    },
+    {
+        "name": "dfsdfs",
+        "age": 23,
+        "scores": [
+            33,
+            34,
+            55,
+            66
+        ],
+        "average_score": 47,
+        "grade": "F",
+        "id": "681abac24e879"
+    },
+    {
+        "name": "Hello",
+        "age": 12,
+        "scores": [
+            5,
+            66,
+            33,
+            45
+        ],
+        "average_score": 37.25,
+        "grade": "F",
+        "id": "681abeb974953"
+    },
+    {
+        "name": "Hello",
+        "age": 12,
+        "scores": [
+            5,
+            66,
+            33,
+            45
+        ],
+        "average_score": 37.25,
+        "grade": "F",
+        "id": "681abef00b1a7"
+    },
+    {
+        "name": "dfsdfsfd",
+        "age": 24,
+        "scores": [
+            44,
+            55,
+            66,
+            77
+        ],
+        "average_score": 60.5,
+        "grade": "D",
+        "id": "681abf07abfd7"
+    }
+]
