@@ -160,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 **ទិដ្ឋភាពទូទៅ**៖ Validation ធានាថាទិន្នន័យអ្នកប្រើបំពេញតាមតម្រូវការ (ឧ. វាលចាំបាច់ ទម្រង់ email ត្រឹមត្រូវ)។ Validation អាចជា client-side (HTML/JavaScript) ឬ server-side (PHP)។
 
 **Server-Side Validation ក្នុង PHP**:
-- ពិនិត្យវាលទទេ។
-- ផ្ទៀងផ្ទាត់ទម្រង់ទិន្នន័យ (ឧ. email, លេខ)។
+- ពិនិត្យfieldទទេ។
+- ផ្ទៀងផ្ទាត់ទម្រង់ទិន្នន័យ (ឧ. email, លេខ,phone,...)។
 - សម្អាតទិន្នន័យដើម្បីលុបចោលខ្លឹមសារដែលបង្កគ្រោះថ្នាក់។
 
 **Syntax**:
