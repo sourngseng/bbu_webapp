@@ -26,16 +26,17 @@
 - **action**: បញ្ជាក់ URL ឬឯកសារ (ឧ. `script.php`) ដែលទិន្នន័យ form ត្រូវផ្ញើទៅ។
 - **method**: កំណត់របៀបផ្ញើទិន្នន័យ (`GET` ឬ `POST`)។
 - **input types**: ប្រភេទទូទៅរួមមាន `text`, `password`, `email`, `radio`, `checkbox`, `file`, និង `submit`។
-*** បង្កើត file : script.php ***
-  ```
+
+***បង្កើត file : script.php***
+  ```php
   <?php
       //script.php
       if ($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST") {
           // Get the input value from the form
-          // $inputValue = $_POST['userName'] ?? '';
+           $inputValue = $_POST['userName'] ?? '';
           // $inputValue = isset($_POST['userName']) ? $_POST['userName'] : '';
           //using get method
-          $inputValue = $_GET['userName'] ?? '';
+         // $inputValue = $_GET['userName'] ?? '';
           
           // Process the input value (for example, you can save it to a database or display it)
           echo "You submitted: " . htmlspecialchars($inputValue);
