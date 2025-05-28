@@ -109,6 +109,7 @@
 
 **ទិដ្ឋភាពទូទៅ**៖ PHP ដំណើរការទិន្នន័យ form ដោយប្រើ superglobals៖ `$_GET` សម្រាប់ទិន្នន័យ GET និង `$_POST` សម្រាប់ទិន្នន័យ POST។
 ***បង្កើតfile process.php***
+---
 **Syntax**:
 ```php
 <?php
