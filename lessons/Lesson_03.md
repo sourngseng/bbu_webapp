@@ -12,7 +12,7 @@
 
 ### ១. ការបង្កើត HTML Forms
 
-**ទិដ្ឋភាពទូទៅ**៖ HTML forms ប្រមូលទិន្នន័យពីអ្នកប្រើប្រាស់ ដូចជា អត្ថបទ ការជ្រើសរើស ឬឯកសារ ហើយផ្ញើទៅ server សម្រាប់ដំណើរការ។ ធាតុ `<form>` ជាធុងសម្រាប់ inputs នៃ form។
+**ទិដ្ឋភាពទូទៅ**៖ HTML forms ប្រមូលទិន្នន័យពីអ្នកប្រើប្រាស់ ដូចជា អត្ថបទ ការជ្រើសរើស ឬឯកសារ ហើយផ្ញើទៅ server សម្រាប់ដំណើរការ។ ធាតុ `<form>` ជាកន្លែងសម្រាប់ inputs នៃ form។
 
 **Syntax**:
 ```html
@@ -27,6 +27,25 @@
 - **method**: កំណត់របៀបផ្ញើទិន្នន័យ (`GET` ឬ `POST`)។
 - **input types**: ប្រភេទទូទៅរួមមាន `text`, `password`, `email`, `radio`, `checkbox`, `file`, និង `submit`។
 
+***បង្កើត file : script.php***
+  ```php
+  <?php
+      //script.php
+      if ($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST") {
+          // Get the input value from the form
+           $inputValue = $_POST['userName'] ?? '';
+          // $inputValue = isset($_POST['userName']) ? $_POST['userName'] : '';
+          //using get method
+         // $inputValue = $_GET['userName'] ?? '';
+          
+          // Process the input value (for example, you can save it to a database or display it)
+          echo "You submitted: " . htmlspecialchars($inputValue);
+          echo "<br/>You submitted: $inputValue";
+      } else {
+          echo "No data submitted.";
+      }
+  ?>
+  ```
 **ឧទាហរណ៍**:
 ```html
 <form action="process.php" method="post">
@@ -90,6 +109,8 @@
 
 **ទិដ្ឋភាពទូទៅ**៖ PHP ដំណើរការទិន្នន័យ form ដោយប្រើ superglobals៖ `$_GET` សម្រាប់ទិន្នន័យ GET និង `$_POST` សម្រាប់ទិន្នន័យ POST។
 
+***បង្កើតfile process.php***
+---
 **Syntax**:
 ```php
 <?php
@@ -139,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 **ទិដ្ឋភាពទូទៅ**៖ Validation ធានាថាទិន្នន័យអ្នកប្រើបំពេញតាមតម្រូវការ (ឧ. វាលចាំបាច់ ទម្រង់ email ត្រឹមត្រូវ)។ Validation អាចជា client-side (HTML/JavaScript) ឬ server-side (PHP)។
 
 **Server-Side Validation ក្នុង PHP**:
-- ពិនិត្យវាលទទេ។
-- ផ្ទៀងផ្ទាត់ទម្រង់ទិន្នន័យ (ឧ. email, លេខ)។
+- ពិនិត្យfieldទទេ។
+- ផ្ទៀងផ្ទាត់ទម្រង់ទិន្នន័យ (ឧ. email, លេខ,phone,...)។
 - សម្អាតទិន្នន័យដើម្បីលុបចោលខ្លឹមសារដែលបង្កគ្រោះថ្នាក់។
 
 **Syntax**:
