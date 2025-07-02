@@ -19,8 +19,20 @@ class StudentManagement {
                 echo "<td>" . $student['last_name'] . "</td>";
                 echo "<td>" . $student['email'] . "</td>";
                 echo "<td>" . $student['phone'] . "</td>";
+                echo "<td>" . $student['address'] . "</td>";
+                echo "<td>";
+                    echo "<a href='updateStudent.php?id=" . $student['id'] . "' class='btn btn-warning'>Edit</a> ";
+                    echo "<a href='deleteStudent.php?id=" . $student['id'] . "' class='btn btn-danger'>Delete</a>";
             echo "</tr>";
         }
+    }
+    // getStudentById
+    public function getStudentById($id) {
+        $sql = "SELECT * FROM students WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     //create function getStudents
@@ -51,6 +63,51 @@ class StudentManagement {
         $stmt->bindParam(':address', $address);
              
         return $stmt->execute();
+    }
+    // Update Student Method with PDO
+    public function updateStudent($id, $firstName, $lastName, $email, $phone, $address) {
+        $sql = "UPDATE students SET first_name = :fname, last_name = :lname, email = :email, phone = :phone, address = :address WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':fname', $firstName);
+        $stmt->bindParam(':lname', $lastName);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':address', $address);
+
+        return $stmt->execute();
+    }
+    // Delete Student Method with PDO
+    public function deleteStudent($id) {
+        $sql = "DELETE FROM students WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        
+        $stmt->bindParam(':id', $id);
+        
+        return $stmt->execute();
+    }
+    // Find Student by ID Method with PDO
+    public function findStudentById($id) {
+        $sql = "SELECT * FROM students WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$data) {
+            return null;
+        }
+        
+        return $data; // Return the student data as an associative array
+    }
+    // Find All Students Method with PDO
+    public function findAllStudents() {
+        $sql = "SELECT * FROM students";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>

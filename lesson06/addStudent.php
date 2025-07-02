@@ -42,31 +42,34 @@
         </div>
         <!-- Form Insert Student -->
          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="mb-3">
-                <label for="first_name" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" name="phone" required>
+                </div>
+                <!-- <div class="col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                </div> -->
+                <div class="col-md-12">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="last_name" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
-            </div>
-            <!-- <div class="mb-3">
-                <label for="dob" class="form-label">Date of Birth</label>
-                <input type="date" class="form-control" id="dob" name="dob" required>
-            </div> -->
-            <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
-                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Add Student</button>
+
+            <button type="submit" class="btn btn-primary mt-3">Add Student</button>
         </form>
 
     </div>

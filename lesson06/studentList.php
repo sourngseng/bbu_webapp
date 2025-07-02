@@ -26,6 +26,8 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Address</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
