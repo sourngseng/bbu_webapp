@@ -17,6 +17,9 @@
 
         // Call the addStudent method
         $objStu->addStudent($firstName, $lastName,$email, $phone, $address);
+        // Redirect to the student list page after adding
+        header("Location: index.php");
+        exit();
     }
 ?>
 
